@@ -22,6 +22,7 @@ jobs:
 
   publish-to-pypi:
     needs: run-linter
+    if: github.event_name == 'release' && github.event.action == 'published'
     runs-on: ubuntu-latest
 
     environment: release
