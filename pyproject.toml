@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drf-multi-serializers"
+version = "1.0.0"
+authors = [{ "name" = "Stefano Fusai", "email" = "stefanofusai@gmail.com" }]
+description = "A simple package to handle multiple serializers for the same ViewSet in Django Rest Framework"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["djangorestframework"]
+
+[project.urls]
+Homepage = "https://github.com/stefanofusai/drf-multi-serializers"
+Repository = "https://github.com/stefanofusai/drf-multi-serializers"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "C4",
+    "D",
+    "DTZ",
+    "D1",
+    "E",
+    "ERA",
+    "F",
+    "FLY",
+    "G",
+    "I",
+    "ICN",
+    "INT",
+    "ISC",
+    "LOG",
+    "N",
+    "NPY",
+    "PD",
+    "PERF",
+    "PIE",
+    "PL",
+    "PT",
+    "PTH",
+    "PYI",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "SLF",
+    "T10",
+    "T20",
+    "TD",
+    "TID",
+    "TRY",
+    "UP",
+    "W",
+]
+ignore = ["D100", "D104", "D203", "D213"]
