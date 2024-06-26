@@ -10,12 +10,24 @@ pip install drf-multi-serializers
 
 ## Usage
 
-Simply import the `MultiSerializerMixin` and use it in your ViewSet:
+Simply import the `MultiSerializerMixin` and use it in your API views:
 
 ```python
+from rest_framework.generics import ListCreateAPIView
+from rest_framework.viewsets import ModelViewSet
 from drf_multi_serializers.mixins import MultiSerializerMixin
 
-class MyViewSet(MultiSerializerMixin, viewsets.ModelViewSet):
+...
+
+class MyAPIView(MultiSerializerMixin, ListCreateAPIView):
+    ...
+    serializer_classes = {
+        "create": MyCreateSerializer,
+        "list": MyListSerializer,
+    }
+    ...
+
+class MyViewSet(MultiSerializerMixin, ModelViewSet):
     ...
     serializer_classes = {
         "create": MyCreateSerializer,
