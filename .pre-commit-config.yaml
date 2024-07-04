@@ -9,6 +9,11 @@ repos:
       - id: check-yaml
       - id: requirements-txt-fixer
 
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v3.16.0
+    hooks:
+      - id: pyupgrade
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.5.0
     hooks:
