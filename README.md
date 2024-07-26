@@ -15,7 +15,7 @@ Simply import the `MultiSerializerMixin` and use it in your API views:
 ```python
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.viewsets import ModelViewSet
-from drf_multi_serializers.mixins import MultiSerializerMixin
+from drf_multi_serializers import MultiSerializerMixin
 
 ...
 
