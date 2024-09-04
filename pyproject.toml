@@ -21,4 +21,4 @@ strict = true
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D100", "D104", "D203", "D213"]
+ignore = ["D100", "D104", "D203", "D213", "ISC001"]
