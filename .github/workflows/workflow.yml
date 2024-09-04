@@ -4,7 +4,8 @@ on:
   push:
   pull_request:
   release:
-    types: [published]
+    types:
+      - published
 
 permissions:
   contents: read
@@ -15,7 +16,9 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.11, 3.12]
+        python-version:
+          - 3.11
+          - 3.12
 
     steps:
       - name: Checkout repository
@@ -38,7 +41,8 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.12]
+        python-version:
+          - 3.12
 
     steps:
       - name: Checkout repository

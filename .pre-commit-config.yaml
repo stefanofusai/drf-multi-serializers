@@ -21,11 +21,15 @@ repos:
     rev: v0.6.2
     hooks:
       - id: ruff
-        args: [--fix]
+        args:
+          - --fix
       - id: ruff-format
 
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.2.27
     hooks:
       - id: pip-compile
-        args: [requirements.in, -o, requirements.txt]
+        args:
+          - requirements.in
+          - -o
+          - requirements.txt
