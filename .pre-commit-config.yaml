@@ -14,6 +14,15 @@ repos:
       - id: file-contents-sorter
         files: ^requirements\.in$
 
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.2.27
+    hooks:
+      - id: pip-compile
+        args:
+          - requirements.in
+          - -o
+          - requirements.txt
+
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.16.0
     hooks:
@@ -26,12 +35,3 @@ repos:
         args:
           - --fix
       - id: ruff-format
-
-  - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.2.27
-    hooks:
-      - id: pip-compile
-        args:
-          - requirements.in
-          - -o
-          - requirements.txt
