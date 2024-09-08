@@ -12,7 +12,7 @@ repos:
       - id: check-toml
       - id: check-yaml
       - id: file-contents-sorter
-        files: requirements.in
+        files: ^requirements\.in$
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.16.0
