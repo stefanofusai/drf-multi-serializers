@@ -11,6 +11,8 @@ repos:
     hooks:
       - id: check-toml
       - id: check-yaml
+      - id: file-contents-sorter
+        files: requirements.in
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.16.0
@@ -24,11 +26,6 @@ repos:
         args:
           - --fix
       - id: ruff-format
-
-  - repo: https://github.com/stefanofusai/sort-requirements-in
-    rev: v1.0.1
-    hooks:
-      - id: sort-requirements-in
 
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.2.27
