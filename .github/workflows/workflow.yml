@@ -27,7 +27,7 @@ jobs:
       - name: Run linter on Python ${{ matrix.python-version }}
         uses: chartboost/ruff-action@v1
         with:
-          version: 0.6.2
+          version: 0.6.5
 
   publish-to-pypi:
     needs: run-linter
