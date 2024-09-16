@@ -15,7 +15,7 @@ repos:
         files: ^requirements\.in$
 
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.2.27
+    rev: 0.4.10
     hooks:
       - id: pip-compile
         args:
@@ -24,7 +24,7 @@ repos:
           - requirements.txt
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.16.0
+    rev: v3.17.0
     hooks:
       - id: pyupgrade
 
