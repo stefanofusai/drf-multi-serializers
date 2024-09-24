@@ -5,7 +5,6 @@ updates:
     schedule:
       interval: daily
     target-branch: main
-
   - package-ecosystem: pip
     directory: /
     schedule:
