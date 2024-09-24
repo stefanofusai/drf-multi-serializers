@@ -10,8 +10,6 @@ repos:
     hooks:
       - id: end-of-file-fixer
       - id: file-contents-sorter
-        files: ^\.env\.template$
-      - id: file-contents-sorter
         files: ^\.requirements\.in$
   # Specific checks and fixes for different file types
   - repo: https://github.com/markdownlint/markdownlint
