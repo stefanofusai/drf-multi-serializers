@@ -1,6 +1,7 @@
 # drf-multi-serializers
 
-A simple package to handle multiple serializers for the same view in Django Rest Framework.
+A simple package to handle multiple serializers
+for the same view in Django Rest Framework.
 
 ## Installation
 
@@ -32,7 +33,9 @@ class MyViewSet(MultiSerializerMixin, ModelViewSet):
     serializer_classes = {
         "create": MyCreateSerializer,
         "list": MyListSerializer,
-        "metadata": MyMetadataSerializer,  # create ViewSets require either serializer_class or metadata serializer for OPTION requests
+        # create ViewSets require either serializer_class
+        # or metadata serializer for OPTION requests
+        "metadata": MyMetadataSerializer,
         "partial_update": MyUpdateSerializer,
         "retrieve": MyRetrieveSerializer,
         "update": MyUpdateSerializer,
