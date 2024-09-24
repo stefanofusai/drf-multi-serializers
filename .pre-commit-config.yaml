@@ -18,6 +18,9 @@ repos:
     rev: 41fc308f0d7f2647f0ae2c2d3826f48e42d964f4
     hooks:
       - id: markdownlint
+        args:
+          - -r
+          - ~MD013
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
