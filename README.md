@@ -1,6 +1,6 @@
 # drf-multi-serializers
 
-A simple package to handle multiple serializers for the same view in Django Rest Framework.
+Handle multiple serializers for the same view in Django Rest Framework.
 
 ## Installation
 
