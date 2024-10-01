@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "drf-multi-serializers"
-version = "1.1.0"
+version = "1.1.1"
 authors = [{ "name" = "Stefano Fusai", "email" = "stefanofusai@gmail.com" }]
 description = "Handle multiple serializers for the same view in Django Rest Framework."
 readme = "README.md"
