@@ -13,7 +13,7 @@ repos:
         files: ^requirements\.in$
   # Specific checks and fixes for different file types
   - repo: https://github.com/markdownlint/markdownlint
-    rev: v0.12.0
+    rev: v0.13.0
     hooks:
       - id: markdownlint
         args:
