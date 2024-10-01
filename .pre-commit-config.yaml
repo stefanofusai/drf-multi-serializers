@@ -13,7 +13,7 @@ repos:
         files: ^requirements\.in$
   # Specific checks and fixes for different file types
   - repo: https://github.com/markdownlint/markdownlint
-    rev: 41fc308f0d7f2647f0ae2c2d3826f48e42d964f4
+    rev: v0.13.0
     hooks:
       - id: markdownlint
         args:
@@ -24,7 +24,7 @@ repos:
     hooks:
       - id: check-toml
   - repo: https://github.com/adrienverge/yamllint
-    rev: f0c0c7586b97809289bdcfe83a66363330b645d8
+    rev: v1.35.1
     hooks:
       - id: yamllint
         args:
@@ -43,7 +43,7 @@ repos:
     hooks:
       - id: pyupgrade
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.5
+    rev: v0.6.8
     hooks:
       - id: ruff
         args:
@@ -68,7 +68,7 @@ repos:
           - main
   # Dependency management
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.4.10
+    rev: 0.4.17
     hooks:
       - id: pip-compile
         args:
