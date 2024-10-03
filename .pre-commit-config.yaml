@@ -56,7 +56,7 @@ repos:
       - id: gitlint
         args:
           - -c
-          - title-match-regex.regex=^(Build|Bump|Chore|Ci|Docs|Feat|Fix|Perf|Refactor|Revert|Style|Test):\s[a-z].*$
+          - title-match-regex.regex=^\[#\d+\]\s(Build|Bump|Chore|Ci|Docs|Feat|Fix|Perf|Refactor|Revert|Style|Test):\s[a-z].*$
           - --ignore=B6
           - --msg-filename
   - repo: https://github.com/pre-commit/pre-commit-hooks
