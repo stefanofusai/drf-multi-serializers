@@ -21,4 +21,24 @@ strict = true
 
 [tool.ruff.lint]
 select = ["ALL"]
-ignore = ["D100", "D104", "D203", "D213", "ISC001"]
+ignore = [
+    # Bad rules
+    "COM812",
+    "D203",
+    "D212",
+    "E501",
+    "FA102",
+    "FIX",
+    "ISC001",
+    "PLR2004",
+    "RUF012",
+    "S101",
+    "S311",
+    "TD001",
+    "TD002",
+    "TD003",
+    "TRY003",
+    # Project-specific rules
+    "D100",
+    "D104"
+]
