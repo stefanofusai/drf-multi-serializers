@@ -2,7 +2,7 @@ from rest_framework.serializers import Serializer
 
 
 class MultiSerializerMixin:
-    """A mixin that allows you to define different serializers for different ViewSet actions."""  # noqa: E501
+    """A mixin that allows you to define different serializers for different ViewSet actions."""
 
     serializer_classes: dict[str, type[Serializer]]
 
