@@ -42,3 +42,6 @@ ignore = [
     "D100",
     "D104"
 ]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
