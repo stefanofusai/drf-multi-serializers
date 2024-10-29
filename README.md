@@ -70,6 +70,12 @@ class MyViewSet(MultiSerializerMixin, ModelViewSet):
     ...
 ```
 
+## Development
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Contributing
 
 Contributions are welcome! To get started, please refer to our [contribution guidelines](https://github.com/stefanofusai/drf-multi-serializers/blob/main/CONTRIBUTING.md).
