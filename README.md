@@ -74,6 +74,8 @@ class MyViewSet(MultiSerializerMixin, ModelViewSet):
 
 ```bash
 pip install -r requirements.txt
+pre-commit install --install-hooks
+pre-commit install --hook-type commit-msg
 ```
 
 ## Contributing
