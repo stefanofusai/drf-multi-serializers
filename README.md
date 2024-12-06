@@ -2,10 +2,12 @@
 
 Handle multiple serializers for the same view in Django Rest Framework.
 
+This package uses [uv](https://docs.astral.sh/uv/) for project management. To get started, ensure that **uv** is installed on your machine and updated to the `0.5.6` version. Detailed installation instructions for **uv** can be found [here](https://docs.astral.sh/uv/getting-started/installation/).
+
 ## Installation
 
 ```bash
-pip install drf-multi-serializers
+uv add drf-multi-serializers
 ```
 
 ## Usage
@@ -40,7 +42,7 @@ class MyViewSet(MultiSerializerMixin, ModelViewSet):
     ...
 ```
 
-drf-multi-serializers also supports Django Rest Framework's versioning system!
+`drf-multi-serializers` also supports Django Rest Framework's versioning system!
 
 ```python
 from rest_framework.generics import ListCreateAPIView
@@ -73,9 +75,9 @@ class MyViewSet(MultiSerializerMixin, ModelViewSet):
 ## Development
 
 ```bash
-pip install -r requirements.txt
-pre-commit install --install-hooks
-pre-commit install --hook-type commit-msg
+uv sync
+uv run pre-commit install --install-hooks
+uv run pre-commit install --hook-type=commit-msg
 ```
 
 ## Contributing
