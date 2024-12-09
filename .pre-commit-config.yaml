@@ -3,8 +3,26 @@ ci:
     - uv-lock
 default_language_version:
   python: python3.12
+fail_fast: true
 repos:
-  # Generic file checks and fixes
+  # Specific checks and fixes for Git
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.19.1
+    hooks:
+      - id: gitlint
+        args:
+          - -c
+          - title-match-regex.regex=^\[#\d+\]\s(Build|Bump|Chore|Ci|Docs|Feat|Fix|Perf|Refactor|Revert|Style|Test):\s[a-z].*$
+          - --ignore=B6
+          - --msg-filename
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: no-commit-to-branch
+        args:
+          - --branch
+          - main
+  # Generic checks and fixes
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
@@ -47,23 +65,6 @@ repos:
         args:
           - --fix
       - id: ruff-format
-  # Specific checks and fixes for Git
-  - repo: https://github.com/jorisroovers/gitlint
-    rev: v0.19.1
-    hooks:
-      - id: gitlint
-        args:
-          - -c
-          - title-match-regex.regex=^\[#\d+\]\s(Build|Bump|Chore|Ci|Docs|Feat|Fix|Perf|Refactor|Revert|Style|Test):\s[a-z].*$
-          - --ignore=B6
-          - --msg-filename
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
-    hooks:
-      - id: no-commit-to-branch
-        args:
-          - --branch
-          - main
   # Dependency management
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.5.6
