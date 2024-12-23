@@ -25,7 +25,7 @@ build-backend = "hatchling.build"
 [dependency-groups]
 development = [
     "pre-commit==4.0.1",
-    "ruff==0.8.2",
+    "ruff==0.8.4",
 ]
 
 [tool.mypy]
