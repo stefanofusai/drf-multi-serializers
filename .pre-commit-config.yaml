@@ -46,7 +46,7 @@ repos:
           - -d
           - "{extends: default, rules: {comments: {min-spaces-from-content: 1}, document-start: {present: false}, line-length: disable}}"
   - repo: https://github.com/google/yamlfmt
-    rev: v0.13.0
+    rev: v0.14.0
     hooks:
       - id: yamlfmt
         args:
@@ -54,11 +54,11 @@ repos:
           - eof_newline=true
   # Specific checks and fixes for Python files
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.18.0
+    rev: v3.19.1
     hooks:
       - id: pyupgrade
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.8.2
+    rev: v0.8.4
     hooks:
       - id: ruff
         args:
@@ -66,7 +66,7 @@ repos:
       - id: ruff-format
   # Dependency management
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.5.6
+    rev: 0.5.13
     hooks:
       - id: uv-lock
         args:
