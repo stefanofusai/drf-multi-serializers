@@ -31,7 +31,7 @@ development = [
 ]
 
 [tool.mypy]
-plugins = "mypy_drf_plugin.main"
+plugins = ["mypy_drf_plugin.main"]
 strict = true
 
 [tool.ruff.lint]
