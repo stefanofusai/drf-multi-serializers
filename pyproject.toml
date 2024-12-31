@@ -25,7 +25,7 @@ build-backend = "hatchling.build"
 [dependency-groups]
 development = [
     "djangorestframework-stubs[compatible-mypy]==3.15.2",
-    "mypy==1.12.1",
+    "mypy==1.14.1",
     "pre-commit==4.0.1",
     "ruff==0.8.4",
 ]
