@@ -1,6 +1,6 @@
 [project]
 name = "drf-multi-serializers"
-version = "1.4.0"
+version = "1.4.1"
 description = "Handle multiple serializers for the same view in Django Rest Framework."
 readme = "README.md"
 authors = [
@@ -31,7 +31,7 @@ development = [
 ]
 
 [tool.mypy]
-# ignore_missing_imports = true
+plugins = "mypy_drf_plugin.main"
 strict = true
 
 [tool.ruff.lint]

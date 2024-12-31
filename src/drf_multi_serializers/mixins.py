@@ -1,3 +1,5 @@
+from typing import Any
+
 from rest_framework.request import Request
 from rest_framework.serializers import Serializer
 
@@ -8,9 +10,11 @@ class MultiSerializerMixin:
     """A mixin that allows you to define different serializers for different view actions/methods/versions."""
 
     request: Request
-    serializer_classes: dict[str, type[Serializer] | dict[str, type[Serializer]]]
+    serializer_classes: dict[
+        str, type[Serializer[Any]] | dict[str, type[Serializer[Any]]]
+    ]
 
-    def get_serializer_class(self) -> type[Serializer]:
+    def get_serializer_class(self) -> type[Serializer[Any]]:
         """
         Get the appropriate serializer class based on the view's action or the request's version.
 
