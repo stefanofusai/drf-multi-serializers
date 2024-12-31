@@ -1,6 +1,6 @@
 [project]
 name = "drf-multi-serializers"
-version = "1.4.0"
+version = "1.4.1"
 description = "Handle multiple serializers for the same view in Django Rest Framework."
 readme = "README.md"
 authors = [
@@ -24,12 +24,14 @@ build-backend = "hatchling.build"
 
 [dependency-groups]
 development = [
+    "djangorestframework-stubs[compatible-mypy]==3.15.2",
+    "mypy==1.12.1",
     "pre-commit==4.0.1",
     "ruff==0.8.4",
 ]
 
 [tool.mypy]
-python_version = "3.12"
+plugins = ["mypy_drf_plugin.main"]
 strict = true
 
 [tool.ruff.lint]
