@@ -60,3 +60,6 @@ ignore = [
 
 [tool.ruff.lint.isort]
 split-on-trailing-comma = false
+
+[tool.uv]
+resolution = "lowest-direct"

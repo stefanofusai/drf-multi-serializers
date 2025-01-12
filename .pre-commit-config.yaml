@@ -75,5 +75,3 @@ repos:
     rev: 0.5.13
     hooks:
       - id: uv-lock
-        args:
-          - --resolution=lowest-direct
