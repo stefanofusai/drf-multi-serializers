@@ -46,7 +46,7 @@ repos:
           - -d
           - "{extends: default, rules: {comments: {min-spaces-from-content: 1}, document-start: {present: false}, line-length: disable}}"
   - repo: https://github.com/google/yamlfmt
-    rev: v0.14.0
+    rev: v0.15.0
     hooks:
       - id: yamlfmt
         args:
